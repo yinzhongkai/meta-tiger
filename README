@@ -1,0 +1,33 @@
+meta-tiger
+==========
+
+meta-tiger 是 tiger 开发板（ARM Cortex-A53）的 Yocto BSP layer，
+提供 MACHINE 配置、启动链集成（TF-A / U-Boot / linux-tiger）
+以及 tiger 专用的镜像配方与包组。
+
+当前状态：骨架阶段，仅包含 layer 配置与文档，配方将随后续开发逐步加入。
+
+Dependencies
+============
+
+- OE-Core（Poky 中的 meta 层），scarthgap 分支
+
+Adding the meta-tiger layer to your build
+=========================================
+
+在构建目录下执行：
+
+    bitbake-layers add-layer <path-to-meta-tiger>
+
+或将 meta-tiger 的绝对路径手动加入 build/conf/bblayers.conf 的 BBLAYERS。
+
+Patches
+=======
+
+提交补丁或问题反馈，请发送邮件至维护者邮箱，
+邮件主题请注明 [meta-tiger]。
+
+Maintainer
+==========
+
+阿凯 <kai@<your-company>.com>（职责分工详见 MAINTAINERS 文件）

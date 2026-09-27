@@ -1,0 +1,9 @@
+meta-tiger 维护者名单
+=====================
+
+Maintainer: 阿凯 <kai@<your-company>.com>
+Reviewer:   达哥 <zhou@<your-company>.com>
+
+职责说明：
+- Maintainer 负责 layer 的日常开发与提交
+- Reviewer 负责变更审核，重大结构调整需 Reviewer 确认
