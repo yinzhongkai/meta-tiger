@@ -3,6 +3,9 @@
 The layer pins the appended QEMU recipe to 8.2.7. Its 31 existing OE
 patches remain first; the tiger patch is appended. conf/machine/tiger.conf
 is only the chapter 4 freestanding test machine, not a Linux BSP.
+It builds the AArch64 system target and removes native SDL, OpenGL/virgl
+and KVM options: the experiment needs TCG and a serial backend. This
+also avoids unrelated Mesa/LLVM compilation in a fresh build.
 
 The fixture recipe uses the declared cross compiler, validates the ELF,
 map and raw layout, generates config_bsp metadata with tracked inputs,
