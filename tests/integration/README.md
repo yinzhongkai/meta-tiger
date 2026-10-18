@@ -65,7 +65,12 @@ helper. QMP quit is the controlled successful termination. Instrumentation
 starts paused but requires actual guest execution and three markers.
 
 The deployment tests create private bad configs while preserving all
-public deploy assets. Repeat the successful runqemu test afterwards.
+public deploy assets. They isolate missing BIOS/kernel inputs from the
+launcher fallback glob, then verify an explicitly supplied kernel is
+refused without guest instructions. The locked launcher logs that QEMU
+error but returns zero: inspect its error and execution evidence rather
+than treating that zero as boot success. Repeat the successful runqemu
+test afterwards.
 The model stage's tests/model/test-tiger.py must also be repeated using
 the new helper binary and an alias view of the formally deployed
 raw/ELF/manifest. Keep binary artifacts in the build workspace, and raw
